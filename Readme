@@ -1,0 +1,19 @@
+# MVP > 
+# 1- build Database ( testing ) Done
+    -employees (id , name , salary , depid) Done
+    - department (id , name) Done
+
+# 2- build User Interface Done
+
+# 3- shared view <navbar> Done
+
+# CRUD > employees , dept Done
+
+# 4- LOGIN > admin 
+
+# 5- authrization
+
+# 6- valdiation 
+
+# 7-  profile Upload files (images)
+
