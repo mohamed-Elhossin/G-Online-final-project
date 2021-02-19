@@ -6,12 +6,14 @@ include '../genralPhp/configDatabase.php';
 if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $pass = $_POST['pass'];
-    $select = "SELECT * FROM `admin` WHERE email ='$email' and  password ='$pass' ";
+    $select = "SELECT * FROM `admin` WHERE email ='$email' and  password ='$pass' "; // send on row
     $s = mysqli_query($conn, $select);
     $numRows = mysqli_num_rows($s);
-
+    $row =  mysqli_fetch_assoc($s);
+    
     if ($numRows > 0) {
         $_SESSION['admin'] = $email;
+        $_SESSION['owner'] = $row['email'] ;
         header('location: /company/employees/listEmp.php');
     } else {
         echo "<div class='alert alert-danger col-6 m-auto'>
@@ -23,9 +25,9 @@ if (isset($_POST['login'])) {
 ?>
 
 <div class="container col-6 my-5 text-center">
- <div class="alert alert-info"> 
- <h2>Welcome At Login Page </h2>
-</div>
+    <div class="alert alert-info">
+        <h2>Welcome At Admin Login Page </h2>
+    </div>
     <form method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">E-mail </label>

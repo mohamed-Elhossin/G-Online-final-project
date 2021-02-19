@@ -21,6 +21,7 @@ if (isset($_GET['delete'])) {
             <th>ID</th>
             <th>Name</th>
             <th>Salary</th>
+            <th>Image</th>
             <th>D-ID</th>
             <th>Action</th>
         </tr>
@@ -29,6 +30,7 @@ if (isset($_GET['delete'])) {
                 <td> <?php echo $data['id'] ?> </td>
                 <td> <?php echo $data['name'] ?> </td>
                 <td> <?php echo $data['salary'] ?> </td>
+                <td> <img width="20" src="upload/<?php echo $data['img'] ?>" alt="">  </td>
                 <td> <?php echo $data['depid'] ?> </td>
                 <td>
                     <a href="listEmp.php?delete=<?php echo $data['id'] ?>" onclick="return confirm('Are You Sure !')" class="btn btn-danger">Delete </a>

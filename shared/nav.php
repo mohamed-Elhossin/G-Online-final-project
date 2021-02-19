@@ -17,7 +17,7 @@ if (isset($_GET['logout'])) {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
 
-            <?php if (isset($_SESSION['admin'])) : ?>
+            <?php if (isset($_SESSION['admin']) || isset($_SESSION['hr'])) : ?>
                 <li class="nav-item active">
                     <a class="nav-link" href="/company/index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
@@ -41,10 +41,12 @@ if (isset($_GET['logout'])) {
                     </div>
                 </li>
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-success my-2 my-sm-0" name="logout" type="submit">LogOut</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" onclick="return confirm('Are You Sure ?')" name="logout" type="submit">LogOut</button>
                 </form>
             <?php else : ?>
                 <li class="nav-item"> <a href="/company/admin/login.php" class="btn btn-primary">Login </a> </li>
+                <li class="nav-item"> <a href="/company/admin/hrlogin.php" class="btn btn-warning">HR Login </a> </li>
+
         </ul>
     <?php endif; ?>
     </div>

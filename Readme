@@ -1,6 +1,6 @@
 # MVP > 
 # 1- build Database ( testing ) Done
-    -employees (id , name , salary , depid) Done
+    - employees (id , name , salary , depid) Done
     - department (id , name) Done
 
 # 2- build User Interface Done
@@ -9,10 +9,12 @@
 
 # CRUD > employees , dept Done
 
-# 4- LOGIN > admin 
+# 4- LOGIN > admin > password  , enmil
 
-# 5- authrization
-
+# 5-  admin > authrization
+      Toma  > owner > all functionality  
+      slama >  manger assiset >  Delete Update , not ADD
+      employees == "HR" > List Data
 # 6- valdiation 
 
 # 7-  profile Upload files (images)
